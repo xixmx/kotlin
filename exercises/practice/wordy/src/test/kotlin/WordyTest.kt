@@ -49,6 +49,9 @@ class WordyTest {
 
     @Test
     fun `multiple division`() = assertEquals(2, Wordy.answer("What is -12 divided by 2 divided by -3?"))
+    
+    @Test
+    fun `very long calculation`() = assertEquals(50, Wordy.answer("What is 3 plus 2 plus 7 plus 3 plus 5 plus 13 plus 3 plus 4 multiplied by 5 divided by 4 minus -2 plus 7 plus 3 minus 2 minus 10?"))
 
     @Test(expected = Exception::class)
     fun `unknown operation`() = Wordy.answer("What is 52 cubed?").toUnit()
